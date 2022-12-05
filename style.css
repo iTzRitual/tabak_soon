@@ -1,0 +1,110 @@
+@font-face {
+    font-family: STHupo;
+    src: url(chinese.sthupo.ttf);
+}
+html,
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+body {
+    background-color: #171717;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header {
+    height: calc(100vh - 530px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+}
+#logo {
+    font-family: STHupo;
+    font-size: 90px;
+    color: #f8e823;
+}
+h1 {
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 22px;
+}
+h2 {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 17px;
+}
+h3 {
+    color: #C0C0C0;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+}
+#map {
+    height: 450px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+#address {
+    position: absolute;
+    left: 50%;
+    bottom: 420px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+#address p {
+    color: #C0C0C0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+#address a {
+    padding: 18px 35px;
+    display: block;
+    color: white;
+    background: #283270;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 16px;
+    transition: .3s;
+}
+#address a:hover {
+    background: #242B5B;
+}
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-device-width: 980px) {
+    #map {
+        height: 40vh;
+    }
+    #address {
+        position: absolute;
+        left: 50%;
+        bottom: calc(40vh - 30px);
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    header {
+        height: calc(60vh - 80px);
+    }
+    #address {
+        display: none;
+    }
+    #address.mobile {
+        position: static;
+        display: block;
+        transform: translateX(0);
+        margin-top: 80px;
+    }
+    #address.mobile a {
+        display: inline-block;
+    }
+}
